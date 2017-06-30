@@ -13,7 +13,7 @@ ENV MULE_HOME /opt/mule
 VOLUME ["/opt/mule/logs", "/opt/mule/conf", "/opt/mule/apps", "/opt/mule/domains"]
 # Define working directory.
 WORKDIR /opt/mule
-RUN cd /opt/mule/bin && && wget https://mule-agent.s3.amazonaws.com/1.7.1/agent-setup-1.7.1.zip && unzip agent-setup-1.7.1.zip && rm -rf agent-setup-1.7.1.zip  && mkdir ../plugins && ./amc_setup -I 
+RUN cd /opt/mule/bin && wget https://mule-agent.s3.amazonaws.com/1.7.1/agent-setup-1.7.1.zip && unzip agent-setup-1.7.1.zip && rm -rf agent-setup-1.7.1.zip  && mkdir ../plugins && ./amc_setup -I 
 
 # Default http port
 EXPOSE 8081
